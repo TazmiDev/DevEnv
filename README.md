@@ -9,9 +9,19 @@ This is a project designed to help you quickly install various programming langu
 Before installing any packages, be sure to run the following command to update your system's package list:
 
 Once your package list is up-to-date, you can run the `install.sh` script included in this project to install the packages you need. To do so, navigate to the root directory of the project and run the following command:
+```linux
+cd DevEnv
+chmod +x ./*
+./install.sh
+```
 
 After the installation is complete, you can start the development environment by running the following command:
-
+```linux
+# You can run 'devenv -h' to see how to use it
+devenv -h
+# run command
+devenv
+```
 
 ## Supported Languages
 
