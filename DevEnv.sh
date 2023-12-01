@@ -23,7 +23,7 @@ show_help() {
     	echo "Usage method:"
     	echo ""
     	echo "Options："
-    	echo -e "${GREEN}   -h     --help          ${RESET}Show help information"
+    	echo -e "${GREEN}   -h     --help          ${RESET} Show help information"
 	echo -e "${GREEN}   -v     --version       ${RESET} Display version number"
 }
 show_version() {
@@ -155,11 +155,9 @@ elif [ "$choice" == "4" ] || [ "$choice" == "004" ]; then
             latest_version=$(curl -s https://adoptopenjdk.net/releases.html | grep -oP '(?<=Latest Release<\/td><td>)(.*)(?=<\/td>)')
             if [ "$java_version" != "$latest_version" ]; then
 		sudo apt install -y default-jdk default-jre
-		echo -e "Java is installed, version ${GREEN}$latest_version${RESET}"
             fi
         else
 	    sudo apt-get install -y default-jdk default-jre
-            echo -e "Java is installed, version ${GREEN}$(java -version 2>&1)${RESET}"
         fi
     fi
 elif [ "$choice" == "exit" ]; then
